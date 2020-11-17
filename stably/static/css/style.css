@@ -1,0 +1,90 @@
+
+body {font-family: Arial, Helvetica, sans-serif;}
+* {
+box-sizing: border-box;
+}
+.container {
+  border-radius: 5px;
+  background-color: ;
+  padding: 7%;
+}
+.limit{
+    padding: 33%;
+}
+.parent {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top:50px;
+}
+.description {
+  padding-top: 2%;
+  margin-right: 15%;
+  margin-left: 15%;
+  margin-bottom: 3%;
+  height:90%;
+}
+
+input[type=number] {
+  background-color: #d1e0e0;
+  color: white;
+}
+.note{
+  width:600px;
+  padding-left: 50px;
+  font-size: 13px;
+}
+.note p {
+    padding-left: 20px;
+}
+
+.notify{
+    padding-top: 50px;
+    padding-left: 10%;
+    text-align: center;
+}
+.description::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.content{
+  border: 2px solid #dedede;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  margin: 10px 0;
+  height: 70%;
+  width:80%;
+  align: center;
+  margin: 0% 10% 10%;
+  padding-bottom: 3%;
+}
+
+
+/* Start by setting display:none to make this hidden.
+   Then we position it in relation to the viewport window
+   with position:fixed. Width, height, top and left speak
+   for themselves. Background we set to 80% white with
+   our animation centered, and no-repeating */
+.modal {
+    display:    none;
+    position:   fixed;
+    background: rgba( 255, 255, 255, .8 )
+                url('http://i.stack.imgur.com/FhHRx.gif')
+                50% 50%
+                no-repeat;
+}
+
+/* When the body has the loading class, we turn
+   the scrollbar off with overflow:hidden */
+body.loading .modal {
+    overflow: hidden;
+}
+
+/* Anytime the body has the loading class, our
+   modal element will be visible */
+body.loading .modal {
+    display: block;
+}

@@ -1,0 +1,4 @@
+django
+python
+selenium
+geckodriver.exe

@@ -1,0 +1,48 @@
+{% extends "home.html" %}
+{% block cssfiles%}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock%}
+      {% block content %}
+
+      <div class="container">
+          <!-- main page content-->
+        <div class="content" id="spinner" >
+          <div class="description text-success">
+                <h4 class="text-warning">Prime Number</h4>
+                    Enter a natural number. It will returns the highest prime number lower than the given input number.
+                    <span class="time-right"></span>
+                    </div>
+                        <div class="form-group row justify-content-md-center parent">
+                            <div class="col-5">
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control text-primary " id="input_number"
+                                     name = "number" aria-describedby="basic-addon3" value="{{input_number}}" data-target="#prime_number" maxlength="20" placeholder="enter number" required>
+                                     </div>
+                                        <span class=" text-secondary limit">limit: 20 digits</span>
+                                     </div>
+
+                                <!-- button -->
+                                <div class="col-2">
+                                   <div class="input-group mb-3">
+                                        <button type="submit" class="btn btn-sm btn-warning mb-4">Compute</button>
+                                   </div>
+                                 </div>
+                            </div>
+                        <div class="row justify-content-md-center">
+                        <div class="note">
+                            <p class="text-danger" style="padding-left:10%;">Note: input value should not be string and special character's</p>
+                        <span class="time-right"></span>
+                    </div>
+                </div>
+                <div class="panel text-center">
+                        <span class="text-primary prime"  id="prime_number" alt="Loading">&nbsp;&nbsp;</span></div>
+                </div>
+                    <div class="modal"><!-- page loader --></div>
+              </div>
+
+      {% endblock content%}
+{% block jsFiles%}
+{% load static%}
+<script type="text/javascript" src="{% static 'js/response.js' %}"></script>
+{% endblock %}
